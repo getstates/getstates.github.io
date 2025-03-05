@@ -11,6 +11,20 @@
   height: 100vh;
 }
 
+.text {
+  font-family: 'Arial', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #3498db;
+  letter-spacing: 2px;
+  text-align: center;
+  line-height: 1.5;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0 0 25px rgba(0, 0, 255, 0.3);
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: transparent;
+}
+
 .text-center {
   text-align: center;
 }
