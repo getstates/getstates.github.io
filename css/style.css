@@ -1,43 +1,182 @@
+body {
+    background-image: url('../files/background.png');
+    background-size: cover;
+}
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+  .container-game-support {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(54, 54, 54, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+  }
 
-.text {
-  font-family: 'Arial', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #3498db;
-  letter-spacing: 2px;
-  text-align: center;
-  line-height: 1.5;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0 0 25px rgba(0, 0, 255, 0.3);
-  padding: 10px 20px;
-  border-radius: 5px;
-  background: transparent;
-}
+  .container-executor-support {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(54, 54, 54, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    width: 200px;
+  }
+  
+  .title {
+    font-family: 'Arial', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: transparent;
+  }
 
-.text-center {
-  text-align: center;
-}
+  .text {
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: transparent;
+  }
 
-.overflow-hidden {
-  overflow: hidden;
-}
+  .text-small {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: transparent;
+  }
+  
+  .text-extra-small {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: transparent;
+  }
 
-.full-width {
-  width: 100%;
-}
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .max-width {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-.max-width {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+  .loaderCopy {
+    position: relative;
+    padding: 12px 24px;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #1e90ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    outline: none;
+    letter-spacing: 2px;
+    margin-top: 10px;
+  }
+
+  .githubOpen {
+    position: relative;
+    padding: 12px 24px;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #1e90ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    outline: none;
+    letter-spacing: 2px;
+    margin-top: 10px;
+  }
+  
+  .loaderCopy:hover {
+    background-color: #0d75d9;
+    transform: scale(1.05);
+  }
+  
+  .loaderCopy:active {
+    transform: scale(0.98);
+  }
+  
+  .githubOpen:hover {
+    background-color: #0d75d9;
+    transform: scale(1.05);
+  }
+  
+  .githubOpen:active {
+    transform: scale(0.98);
+  }
+  
+  .loaderCopy::after {
+    content: "Copied!";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .loaderCopy.copied::after {
+    opacity: 1;
+  }
+  
