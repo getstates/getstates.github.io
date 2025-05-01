@@ -1,6 +1,7 @@
 body {
     background-image: url('../files/background.png');
     background-size: cover;
+    transform: scale(0.6);
 }
 
 * {
@@ -36,6 +37,14 @@ body {
     backdrop-filter: blur(10px);
     border-radius: 8px;
     width: 200px;
+  }
+
+  .logo-image {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+    display: block;
   }
   
   .title {
