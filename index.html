@@ -3,11 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Synpet - Official page</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title>🐱 Synpet - Official page</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <h1>Synpet 🐱</h1>
-  <p>Website = 20% Complete.</p>
+  <div class="container">
+    <h1 class="title">🐱 Synpet - Official page</h1>
+    <h1 class="text-small">ROBLOX Script hub</h1>
+    <h1 class="text-small">Currently supports: </h1>
+    <div class="container-game-support">
+        <h1 class="text-extra-small">> 🏘 Brookhaven<br>> 💭 Bubblegum Simulator Infinity</h1>
+    </div>
+    <h1 class="text-small">Supported executors: </h1>
+    <div class="container-executor-support">
+        <h1 class="text-extra-small">> Solara<br>> Wave<br>> Xeno<br>And more...</h1>
+    </div>
+    <button class="loaderCopy" onclick="copyLoader()">📋 Click to copy loader</button>
+    <button class="loaderCopy" onclick="openGithub()">📃 Open github page</button>
+  </div>
 </body>
+<script>
+    function copyLoader() {
+      const textToCopy = "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/stringdotmatch/Synpet/refs/heads/main/loader.lua\"))()";
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const btn = document.querySelector('.loaderCopy');
+        btn.classList.add('copied');
+        btn.innerText = "✅ Copied!";
+        setTimeout(() => {
+          btn.innerText = "📋 Click to copy loader";
+          btn.classList.remove('copied');
+        }, 1500);
+      });
+    }
+
+    function openGithub() {
+      window.open("https://github.com/stringdotmatch/Synpet")
+    }
+</script>
 </html>
