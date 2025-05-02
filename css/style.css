@@ -55,6 +55,14 @@ body {
     height: auto;
     object-fit: contain;
     display: block;
+    transition: transform 0.1s ease;
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+
+  .logo-wrapper {
+    perspective: 1000px;
+    display: inline-block;
   }
   
   .title {
@@ -65,7 +73,7 @@ body {
     letter-spacing: 2px;
     text-align: center;
     line-height: 1.5;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 255, 255, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 255, 255, 0.3);
     padding: 10px 20px;
     border-radius: 5px;
     background: transparent;
@@ -79,7 +87,7 @@ body {
     letter-spacing: 2px;
     text-align: center;
     line-height: 1.5;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 255, 255, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 255, 255, 0.3);
     padding: 10px 20px;
     border-radius: 5px;
     background: transparent;
@@ -93,7 +101,7 @@ body {
     letter-spacing: 2px;
     text-align: center;
     line-height: 1.5;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 255, 255, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 255, 255, 0.3);
     padding: 10px 20px;
     border-radius: 5px;
     background: transparent;
@@ -107,7 +115,7 @@ body {
     letter-spacing: 2px;
     text-align: center;
     line-height: 1.5;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 255, 255, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 255, 255, 0.3);
     padding: 10px 20px;
     border-radius: 5px;
     background: transparent;
@@ -138,7 +146,7 @@ body {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
     outline: none;
     letter-spacing: 2px;
     margin-top: 10px;
@@ -156,7 +164,7 @@ body {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
     outline: none;
     letter-spacing: 2px;
     margin-top: 10px;
@@ -165,6 +173,7 @@ body {
   .loaderCopy:hover {
     background-color: #0d75d9;
     transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
   }
   
   .loaderCopy:active {
@@ -174,6 +183,7 @@ body {
   .githubOpen:hover {
     background-color: #0d75d9;
     transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
   }
   
   .githubOpen:active {
@@ -198,4 +208,3 @@ body {
   .loaderCopy.copied::after {
     opacity: 1;
   }
-  
