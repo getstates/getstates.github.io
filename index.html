@@ -3,39 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./files/synpet-logo.png" type="image/x-icon">
-    <title>🐱 Synpet - Official page</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="files/synpet-logo.png" type="image/x-icon">
+    <title>Synpet - Official page</title>
+    <link rel="stylesheet" href="css/style.css">
     <meta name="description" content="The best scripthub to ever exist, all executor supported.">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="🐱 Synpet - Official page">
+    <meta property="og:title" content="Synpet - Official page">
     <meta property="og:description" content="The best scripthub to ever exist, all executor supported.">
+    <meta content="#7214FF" data-react-helmet="true" name="theme-color" />
+    <meta name="twitter:card" content="files/synpet-logo">
 </head>
 <body>
   <div class="container">
-    <img class="logo-image" src="./files/synpet-full-logo.png"/>
+    <div class="logo-wrapper">
+      <img class="logo-image" src="files/synpet-full-logo.png"/>
+    </div>
     <h1 class="title">Synpet - Official page</h1>
-    <h1 class="text-small">ROBLOX Script hub</h1>
+    <h1 class="text-small">ROBLOX Blatant script hub</h1>
     <h1 class="text-small">Currently supports: </h1>
     <div class="container-game-support">
-        <h1 class="text-extra-small">> 🏘 Brookhaven<br>> 💭 Bubblegum Simulator Infinity</h1>
+        <h1 class="text-extra-small">> 🏡 Brookhaven<br>> ✨ Bubblegum Simulator Infinity<br>(more games soon)</h1>
     </div>
     <h1 class="text-small">Supported executors: </h1>
     <div class="container-executor-support">
-        <h1 class="text-extra-small">> Solara<br>> Wave<br>> Xeno<br>And more...</h1>
+        <h1 class="text-extra-small">> 🌠 Solara<br>> 🌊 Wave<br>> 🛸 Xeno<br>And more...</h1>
     </div>
     <h1 class="text-small">Loader: </h1>
     <div class="container-script">
         <h1 class="text-extra-small">loadstring(game:HttpGet("https://raw.githubusercontent.com/stringdotmatch/Synpet/refs/heads/main/loader.lua"))()</h1>
     </div>
     <button class="loaderCopy" onclick="copyLoader()">📋 Click to copy loader</button>
-    <button class="loaderCopy" onclick="openGithub()">📃 Open Synpet github</button>
+    <button class="githubOpen" onclick="openGithub()">📃 Open Synpet github</button>
   </div>
 </body>
 <script>
+    console.log("This website was fully scripted by match - @stringdotmatch on discord")
+    const wrapper = document.querySelector('.logo-wrapper');
+    const image = wrapper.querySelector('.logo-image');
+    const loader = "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/stringdotmatch/Synpet/refs/heads/main/loader.lua\"))()";
+
     function copyLoader() {
-      const textToCopy = "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/stringdotmatch/Synpet/refs/heads/main/loader.lua\"))()";
-      navigator.clipboard.writeText(textToCopy).then(() => {
+      navigator.clipboard.writeText(loader).then(() => {
         const btn = document.querySelector('.loaderCopy');
         btn.classList.add('copied');
         btn.innerText = "✅ Copied!";
@@ -49,5 +57,23 @@
     function openGithub() {
       window.open("https://github.com/stringdotmatch/Synpet")
     }
+
+    wrapper.addEventListener('mousemove', (e) => {
+      const rect = image.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+
+      const deltaX = e.clientX - centerX;
+      const deltaY = e.clientY - centerY;
+
+      const rotateY = deltaX * 0.15;
+      const rotateX = -deltaY * 0.15;
+
+      image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    wrapper.addEventListener('mouseleave', () => {
+      image.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
 </script>
 </html>
