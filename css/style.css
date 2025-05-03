@@ -1,7 +1,7 @@
 body {
     background-image: url('../files/background.png');
     background-size: cover;
-    transform: scale(0.6);
+    transform: scale(0.5);
 }
 
 * {
