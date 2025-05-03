@@ -93,6 +93,35 @@ body {
     background: transparent;
   }
 
+  .warn-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ff0000;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: transparent;
+    margin-top: 10px;
+  }
+
+  .warn-text-small {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ff0000;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: transparent;
+  }
+
   .text-small {
     font-family: 'Arial', sans-serif;
     font-size: 1.5rem;
