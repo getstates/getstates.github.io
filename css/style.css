@@ -1,7 +1,7 @@
 body {
-    background-image: url('../files/background.png');
+    background: linear-gradient(105deg, rgb(31, 31, 31), rgb(10, 10, 10));
     background-size: cover;
-    transform: scale(0.5);
+    transform: scale(0.52);
 }
 
 * {
@@ -73,10 +73,12 @@ body {
     letter-spacing: 2px;
     text-align: center;
     line-height: 1.5;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 255, 255, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0 0 10px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(120deg, rgb(205, 192, 255),rgb(223, 118, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     padding: 10px 20px;
     border-radius: 5px;
-    background: transparent;
   }
 
   .text {
@@ -87,7 +89,10 @@ body {
     letter-spacing: 2px;
     text-align: center;
     line-height: 1.5;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 255, 255, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0 0 10px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(120deg, rgb(205, 192, 255),rgb(223, 118, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     padding: 10px 20px;
     border-radius: 5px;
     background: transparent;
@@ -125,15 +130,17 @@ body {
   .text-small {
     font-family: 'Arial', sans-serif;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 900;
     color: #ffffff;
     letter-spacing: 2px;
     text-align: center;
     line-height: 1.5;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 255, 255, 0.3);
     padding: 10px 20px;
     border-radius: 5px;
-    background: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0 0 10px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(120deg, rgb(205, 192, 255),rgb(223, 118, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   
   .text-extra-small {
@@ -144,10 +151,12 @@ body {
     letter-spacing: 2px;
     text-align: center;
     line-height: 1.5;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 255, 255, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0 0 10px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(120deg, rgb(205, 192, 255),rgb(223, 118, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     padding: 10px 20px;
     border-radius: 5px;
-    background: transparent;
   }
 
   .overflow-hidden {
@@ -169,7 +178,7 @@ body {
     font-family: 'Arial', sans-serif;
     font-size: 1rem;
     font-weight: bold;
-    background-color: #1e90ff;
+    background: linear-gradient(120deg, rgb(200, 185, 255),rgb(228, 139, 255));
     color: #ffffff;
     border: none;
     border-radius: 8px;
@@ -187,7 +196,25 @@ body {
     font-family: 'Arial', sans-serif;
     font-size: 1rem;
     font-weight: bold;
-    background-color: #1e90ff;
+    background: linear-gradient(120deg, rgb(200, 185, 255),rgb(228, 139, 255));
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    outline: none;
+    letter-spacing: 2px;
+    margin-top: 10px;
+  }
+
+  .discordOpen {
+    position: relative;
+    padding: 12px 24px;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    background: linear-gradient(120deg, rgb(200, 185, 255),rgb(228, 139, 255));
     color: #ffffff;
     border: none;
     border-radius: 8px;
@@ -216,6 +243,16 @@ body {
   }
   
   .githubOpen:active {
+    transform: scale(0.98);
+  }
+
+  .discordOpen:hover {
+    background-color: #0d75d9;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
+  }
+  
+  .discordOpen:active {
     transform: scale(0.98);
   }
   
