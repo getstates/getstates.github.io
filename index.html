@@ -21,67 +21,6 @@
     </div>
     <h1 class="title">Lunar - Official page</h1>
     <h1 class="text-small">ROBLOX Blatant script hub</h1>
-    <h1 class="text-small">Currently supports: </h1>
-    <div class="container-game-support">
-        <h1 class="text-extra-small">> 🏡 Brookhaven<br>> ✨ Bubblegum Simulator Infinity<br>(more games soon)</h1>
-    </div>
-    <h1 class="text-small">Supported executors: </h1>
-    <div class="container-executor-support">
-        <h1 class="text-extra-small">> 🌠 Solara<br>> 🌊 Wave<br>> 🛸 Xeno<br>And more...</h1>
-    </div>
-    <h1 class="text-small">Loader: </h1>
-    <div class="container-script">
-        <h1 class="text-extra-small">loadstring(game:HttpGet("https://zxnyv.github.io/loader/loader.lua"))()</h1>
-    </div>
-    <button class="loaderCopy" onclick="copyLoader()">📋 Click to copy loader</button>
-    <button class="githubOpen" onclick="openGithub()">📃 Open Lunar github</button>
-    <button class="discordOpen" onclick="openDiscord()">🔌 Join our discord</button>
-    <h1 class="warn-text">THIS PROJECT IS STILL WORK IN PROGRESS</h1>
-    <h1 class="warn-text-small">ISSUES MAY APPEAR WHILE USING THIS SCRIPT</h1>
-  </div>
+    <h1 class="text-small">Script is discontinued for now.</h1>
 </body>
-<script>
-    console.log("This website was fully scripted by match - @.netio. on discord")
-    const wrapper = document.querySelector('.logo-wrapper');
-    const image = wrapper.querySelector('.logo-image');
-    const loader = "loadstring(game:HttpGet(\"https://zxnyv.github.io/loader/loader.lua\"))()";
-
-    function copyLoader() {
-      navigator.clipboard.writeText(loader).then(() => {
-        const btn = document.querySelector('.loaderCopy');
-        btn.classList.add('copied');
-        btn.innerText = "✅ Copied!";
-        setTimeout(() => {
-          btn.innerText = "📋 Click to copy loader";
-          btn.classList.remove('copied');
-        }, 1500);
-      });
-    }
-
-    function openGithub() {
-      window.open("https://github.com/zxnyv/Lunar")
-    }
-
-    function openDiscord() {
-      window.open("https://discord.gg/cw26CYHcjn")
-    }
-
-    wrapper.addEventListener('mousemove', (e) => {
-      const rect = image.getBoundingClientRect();
-      const centerX = rect.left + rect.width / 2;
-      const centerY = rect.top + rect.height / 2;
-
-      const deltaX = e.clientX - centerX;
-      const deltaY = e.clientY - centerY;
-
-      const rotateY = deltaX * 0.15;
-      const rotateX = -deltaY * 0.15;
-
-      image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    });
-
-    wrapper.addEventListener('mouseleave', () => {
-      image.style.transform = 'rotateX(0deg) rotateY(0deg)';
-    });
-</script>
 </html>
