@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="files/synpet-logo.png" type="image/x-icon">
-    <title>Lunar - Official page</title>
+    <title>Synpet - Official page</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="description" content="The best scripthub to ever exist, all executor supported.">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Lunar - Official page">
+    <meta property="og:title" content="Synpet - Official page">
     <meta property="og:description" content="The best scripthub to ever exist, all executor supported.">
     <meta content="files/synpet-logo" property="og:image"/>
     <meta content="#7214FF" data-react-helmet="true" name="theme-color"/>
@@ -22,5 +22,53 @@
     <h1 class="title">Lunar - Official page</h1>
     <h1 class="text-small">ROBLOX Blatant script hub</h1>
     <h1 class="text-small">Script is discontinued for now.</h1>
+    <h1 class="text-small">For more information click the button down below.</h1>
+    <h class="warn-text">This project is <strong>detected!</strong> Consider using an alt account <b>before</b> executing.</h>
+    <btn class="githubOpen" onclick=openGithub()>Lunar github <strong>project</strong></btn>
+  </div>
 </body>
+<script>
+    console.log("This website was fully scripted by ren - @getstates on discord")
+    const wrapper = document.querySelector('.logo-wrapper');
+    const image = wrapper.querySelector('.logo-image');
+    const loader = "loadstring(game:HttpGet(\"https://getstates.github.io/loader/loader.lua\"))()";
+
+    function copyLoader() {
+      navigator.clipboard.writeText(loader).then(() => {
+        const btn = document.querySelector('.loaderCopy');
+        btn.classList.add('copied');
+        btn.innerText = "✅ Copied!";
+        setTimeout(() => {
+          btn.innerText = "📋 Click to copy loader";
+          btn.classList.remove('copied');
+        }, 1500);
+      });
+    }
+
+    function openGithub() {
+      window.open("https://github.com/getstates/Lunar")
+    }
+
+    function openDiscord() {
+      window.open("https://discord.gg/cw26CYHcjn")
+    }
+
+    wrapper.addEventListener('mousemove', (e) => {
+      const rect = image.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+
+      const deltaX = e.clientX - centerX;
+      const deltaY = e.clientY - centerY;
+
+      const rotateY = deltaX * 0.15;
+      const rotateX = -deltaY * 0.15;
+
+      image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    wrapper.addEventListener('mouseleave', () => {
+      image.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
+</script>
 </html>
